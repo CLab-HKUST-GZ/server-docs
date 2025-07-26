@@ -5,6 +5,7 @@ import { withSidebar } from 'vitepress-sidebar';
 const vitepressConfig: UserConfig<DefaultTheme.Config> = {
   title: "CLab Server Docs",
   description: "A VitePress Site",
+  base: "/server-docs/",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -15,7 +16,7 @@ const vitepressConfig: UserConfig<DefaultTheme.Config> = {
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
+    ],
   }
 }
 
