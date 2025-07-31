@@ -3,16 +3,16 @@
 layout: home
 
 hero:
-  name: "CLab Server Docs"
-  text: "CLab服务器文档"
+  name: "MICS FPGA Cluster"
+  text: "微电子学域 异构计算服务器集群 用户使用手册"
 ---
 
-欢迎使用CLab服务器集群！
+欢迎使用 HKUST(GZ) FPGA 服务器集群！
 
 ## 基本信息
 
-- 检查服务器的当前状态和在线时间，请参见：[CLab服务器状态](./02.server-status.md)
-- 了解服务器IP、硬件资源、网络与存储配置等，请参见：[CLab硬件资源](./01.hardware-resources.md)
+- 检查服务器的当前状态和在线时间，请参见：[服务器状态](./02.server-status.md)
+- 了解服务器IP、硬件资源、网络与存储配置等，请参见：[服务器硬件资源](./01.hardware-resources.md)
 
 ## 使用指南
 
