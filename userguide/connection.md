@@ -24,7 +24,7 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
 
 接下来，需要将您的**公钥** (`id_ed25519.pub`) 的内容添加到服务器上一个名为 `~/.ssh/authorized_keys` 的文件中。`ssh-copy-id` 命令可以自动完成这个过程。
 
-在您**本地电脑**的终端中运行以下命令（替换为您的实际用户名和服务器地址）：
+在您**本地电脑**的终端中运行以下命令（替换为您的实际用户名和服务器地址）。对于学生账户，比如你的学校邮箱是`<name>@connect.hkust-gz.edu.cn`，那你的用户名就是`connect\<name>`。：
 
 ```bash
 ssh-copy-id connect\\cxu930@10.92.254.204
