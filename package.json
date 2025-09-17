@@ -13,7 +13,10 @@
   "license": "ISC",
   "packageManager": "pnpm@10.13.1",
   "devDependencies": {
-    "vitepress": "^1.6.3",
+    "vitepress": "^1.6.4",
     "vitepress-sidebar": "^1.33.0"
+  },
+  "dependencies": {
+    "vitepress-plugin-comment-with-giscus": "^1.1.15"
   }
 }
