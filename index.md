@@ -20,6 +20,13 @@ hero:
 - 了解如何使用Docker/Podman管理开发容器，请参见：[Docker/Podman使用指南](./userguide/docker.md)
 - 了解如何使用XRT和Xilinx FPGA加速卡，请参见：[FPGA与XRT使用指南](./userguide/fpga.md)
 
+## 迁移指南
+
+近期服务器用户系统升级为学校统一认证，可能会遇到一些问题：
+
+- 迁移后安装的Miniforge/Conda可能存在路径问题，请参见：[Conda迁移指南](./migration/conda.md)
+- 迁移后默认都没有Docker权限，请使用Podman代替，开发容器也需要迁移，请参见：[Docker迁移指南](./migration/docker.md)
+
 ## 依赖与软件管理
 
 我们**强烈建议**各位使用Docker容器来管理依赖和环境。Docker容器可以提供隔离性好、一致性优秀的开发环境，并且用户在容器内有完整root权限，可以安装任何软件包。

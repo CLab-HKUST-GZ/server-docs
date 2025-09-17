@@ -15,7 +15,7 @@ const vitepressConfig: UserConfig<DefaultTheme.Config> = {
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/CLab-HKUST-GZ/server-docs' }
     ],
   }
 }
