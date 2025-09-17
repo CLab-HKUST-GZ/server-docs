@@ -2,15 +2,38 @@
 
 本文档旨在引导您安全、高效地远程连接到服务器集群进行开发和计算工作。
 
-## 1\. 通过 SSH 连接服务器
+## 1. 通过 SSH 连接服务器
 
-SSH (Secure Shell) 是连接到远程服务器最常用、最安全的方式。我们**强烈推荐**使用密钥对认证，而不是密码认证，因为它更安全、更便捷。
+SSH (Secure Shell) 是连接到远程服务器最常用、最安全的方式。
+
+### 1.0 使用用户密码连接
+
+对于学生账户，如果你的学校邮箱为`<name>@connect.hkust-gz.edu.cn`，那么你的服务器用户名就是`connect\<name>`，密码也是学校账户的密码。使用如下命令尝试连接，并按照提示输入密码：
+
+```bash
+ssh connect\\<name>@10.92.254.204
+```
+
+::: tip
+在Linux/MacOS下，`\`为Shell的转义字符，因此需要输入两个`\\`代表一个反斜杠。如果您在Windows上使用PowerShell或CMD，则只需输入一个反斜杠即可。
+:::
+
+如果提示：
+
+```bash
+The authenticity of host '10.92.254.204 (10.92.254.204)' can't be established.
+ED25519 key fingerprint is SHA256:jxBs8fBVPdmVcDNwuS9wGfYegLcZYMCda+HI1GC17gA.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? 
+```
+
+输入`yes`并确认，以信任新的服务器。
 
 ### 1.1. 生成 SSH 密钥对
 
-首先，您需要在**您自己的本地电脑**上生成一个 SSH 密钥对（一个私钥，一个公钥）。
+我们**强烈推荐**使用密钥对认证，而不是密码认证，因为它更安全、更便捷。
 
-打开您本地电脑的终端 (Terminal) 或 PowerShell，运行以下命令：
+首先，您需要在**您自己的本地电脑**上生成一个 SSH 密钥对（一个私钥，一个公钥）。打开您本地电脑的终端 (Terminal) 或 PowerShell，运行以下命令：
 
 ```bash
 # -t 指定加密算法为 ed25519 (更现代、更安全)
@@ -29,10 +52,6 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
 ```bash
 ssh-copy-id connect\\cxu930@10.92.254.204
 ```
-
-::: tip
-在Linux/MacOS下，`\`为Shell的转义字符，因此需要输入两个`\\`代表一个反斜杠。如果您在Windows上使用PowerShell或CMD，则只需输入一个反斜杠即可。
-:::
 
 如果使用不是默认的公钥路径，可以使用`-i <path to public key>`指定。成功后，您的公钥就被自动添加到了服务器的信任列表里。
 
